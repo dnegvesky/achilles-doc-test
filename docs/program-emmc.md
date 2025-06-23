@@ -120,7 +120,7 @@ wget https://raw.githubusercontent.com/reflexces/build-scripts/2023.07/prog-file
 wget https://raw.githubusercontent.com/reflexces/build-scripts/2023.07/prog-files/tftp-boot-files/SomA10-V5/Lite/zImage
 ```
 
-Whether you already have a TFTP server setup, or you need to [[BootingAlteraSoCFPGAFromNetworkUsingTFTPAndNFS][configure one first]], it is necessary to change or set some parameters to match the expected values specified in the U-Boot environment variables used in the  “RefDesign_HPS_boot_from_FPGA” reference design.  The default U-Boot environment values are summarized in the table below.  Refer to the Achilles Reference Manual "HPS Development" chapter for addtional details.
+Whether you already have a TFTP server setup, or you need to [Booting Altera SoC FPGA From Network Using TFTP And NFS](https://www.rocketboards.org/foswiki/Documentation/BootingAlteraSoCFPGAFromNetworkUsingTFTPAndNFS), it is necessary to change or set some parameters to match the expected values specified in the U-Boot environment variables used in the  “RefDesign_HPS_boot_from_FPGA” reference design.  The default U-Boot environment values are summarized in the table below.  Refer to the Achilles Reference Manual "HPS Development" chapter for addtional details.
 
 | TFTP Server Parameter                   | u-boot env variable setting    |
 |-----------------------------------------|--------------------------------|
