@@ -129,7 +129,7 @@ quartus_cpf --convert --hps -o bitstream_compression=on achilles_ghrd.sof achill
 
 Note: To run the quartus_cpf command, it may be necessary to specify the full path to your quartus/bin64 installation directory if not already set in your environment PATH variable (e.g. ~/intelFPGA_pro/20.1/quartus/bin64/quartus_cpf ...).
 
-<span style="color: red;">Warning: The .periph.rbf and .core.rbf configuration files must come from the same Quartus project and version.  Attempting to mix configuration files from different projects or compilations will result in FPGA configuration failure.</span>
+<div style="color: red;">Warning: The .periph.rbf and .core.rbf configuration files must come from the same Quartus project and version.  Attempting to mix configuration files from different projects or compilations will result in FPGA configuration failure.</div>
 
 The above step is the same for both the flat and PR versions of the GHRD.  In the PR version, run this above command using the base revision .sof file (achilles_ghrd.sof) to generate the split .rbf files.  For each of the PR region persona revisions, there is a setting enabled in each of the corresponding .qsf files that generates the PR region .rbf files during compilation:
 
