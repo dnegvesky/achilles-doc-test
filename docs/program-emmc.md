@@ -18,13 +18,13 @@ The table below summarizes the files included in the WIC image and how each file
 |----------------------------------|-------------------------------|--------------------|--------------------------------------|
 | achilles-console...rootfs.tar.gz | Poky root filesystem          | Partition 3 (EXT4) | Yocto build                          |
 | u-boot-splx4.sfp                 | SPL image with devicetree     | Partition 2 (A2)   | Yocto build or U-Boot make           |
-| socfpga_arria10_achilles.dtb     | Devicetree binary             |                    | Yocto build or dtbs make             |
-| achilles_ghrd.core.rbf           | FPGA core configuration file  |                    | quartus_cpf after Quartus GHRD build | 
-| fit_spl_fpga_periph_only.itb     | FPGA periphery FIT image      |                    | U-Boot mkimage                       |
+| socfpga_arria10_achilles.dtb     | Devicetree binary             | Partition 1 (FAT)  | Yocto build or dtbs make             |
+| achilles_ghrd.core.rbf           | FPGA core configuration file  | Partition 1 (FAT)  | quartus_cpf after Quartus GHRD build | 
+| fit_spl_fpga_periph_only.itb     | FPGA periphery FIT image      | Partition 1 (FAT)  | U-Boot mkimage                       |
 | fit_spl_fpga.itb                 | FPGA core FIT image           | Partition 1 (FAT)  | U-Boot mkimage                       |
-| zImage                           | compressed Linux kernel image |                    | Yocto build or kernel make           | 
-| u-boot.img                       | U-Boot binary image           |                    | Yocto build or U-Boot make           |
-| extlinux/extlinux.conf           | boot configuration file       |                    | Yocto build (achilles.conf)          |
+| zImage                           | compressed Linux kernel image | Partition 1 (FAT)  | Yocto build or kernel make           | 
+| u-boot.img                       | U-Boot binary image           | Partition 1 (FAT)  | Yocto build or U-Boot make           |
+| extlinux/extlinux.conf           | boot configuration file       | Partition 1 (FAT)  | Yocto build (achilles.conf)          |
 
 The precompiled WIC image can be downloaded from here, or they can be downloaded automatically by using the programming script:
 

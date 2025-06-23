@@ -20,7 +20,7 @@
 
 ### Related Rocketboards Articles
 
-- [Building Bootloader](BuildingBootloader)
-- [How to Create a Device Tree](HOWTOCreateADeviceTree)
-- [BootingAlteraSoCFPGAFromNetworkUsingTFTPAndNFS](Booting Altera SoC FPGA from Network using TFTP and NFS)
-- [Building initramfs for simple network boot](BuildingInitramfsForSimpleNetworkBoot)
+- [Building Bootloader](https://rocketboards.org/foswiki/Documentation/BuildingBootloader)
+- [How to Create a Device Tree](https://rocketboards.org/foswiki/Documentation/HOWTOCreateADeviceTree)
+- [Booting Altera SoC FPGA From Network Using TFTP And NFS](https://www.rocketboards.org/foswiki/Documentation/BootingAlteraSoCFPGAFromNetworkUsingTFTPAndNFS)
+- [Building initramfs for simple network boot](https://rocketboards.org/foswiki/Documentation/BuildingInitramfsForSimpleNetworkBoot)

@@ -201,9 +201,9 @@ Now we have the following files that can be copied to the eMMC:
 |------------------------------|---------------------------------------------------------|----------------------|
 | spl/u-boot-splx4.sfp         | Multiple SPL binaries with devicetree and header info   | Partition 2 (A2 raw) |
 | u-boot.img                   | U-Boot binary image                                     | Partition 1 (VFAT)   |
-| achilles_ghrd.core.rbf       | core.rbf image for FPGA core image configuration	     |                      |
-| fit_spl_fpga_periph_only.itb | FIT image for FPGA peripheral image configuration only	 |                      |
-| fit_spl_fpga.itb             | FIT image for FPGA core image configuration             |                      |
+| achilles_ghrd.core.rbf       | core.rbf image for FPGA core image configuration	     | Partition 1 (VFAT)   |
+| fit_spl_fpga_periph_only.itb | FIT image for FPGA peripheral image configuration only	 | Partition 1 (VFAT)   |
+| fit_spl_fpga.itb             | FIT image for FPGA core image configuration             | Partition 1 (VFAT)   |
 
 If you compiled your own FPGA design or made modifications to the GHRD, you must manually copy the generated files listed above to the appropriate eMMC partition.  Refer to the instructions on the **PROGRAM EMMC** page.
 
