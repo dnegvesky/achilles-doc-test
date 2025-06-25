@@ -2,8 +2,8 @@
 
 <div align="center">
 
-| Home | [Start Here](docs/start-here.md) | [Hardware](docs/hardware.md) | [Software](docs/software.md) | [Program eMMC](docs/program-emmc.md) | [Resources](docs/resources.md) |
-|:----:|:--------------------------------:|:----------------------------:|:----------------------------:|:------------------------------------:|:------------------------------:|
+| Overview | [Start Here](docs/start-here.md) | [Hardware](docs/hardware.md) | [Software](docs/software.md) | [Program eMMC](docs/program-emmc.md) | [Resources](docs/resources.md) |
+|:--------:|:--------------------------------:|:----------------------------:|:----------------------------:|:------------------------------------:|:------------------------------:|
 
 </div>
 
@@ -158,7 +158,7 @@ salesusa @ reflexces.com
 
 <div align="center">
 
-| Home | [Start Here](docs/start-here.md) | [Hardware](docs/hardware.md) | [Software](docs/software.md) | [Program eMMC](docs/program-emmc.md) | [Resources](docs/resources.md) |
-|:----:|:--------------------------------:|:----------------------------:|:----------------------------:|:------------------------------------:|:------------------------------:|
+| Overview | [Start Here](docs/start-here.md) | [Hardware](docs/hardware.md) | [Software](docs/software.md) | [Program eMMC](docs/program-emmc.md) | [Resources](docs/resources.md) |
+|:--------:|:--------------------------------:|:----------------------------:|:----------------------------:|:------------------------------------:|:------------------------------:|
 
 </div>
