@@ -1,14 +1,19 @@
 # REFLEX CES Achilles Arria 10 SoC SOM
 
 ## Table of Contents
-- [Overview](#overview)
-- [Start Here](docs/start-here.md)
-- [Hardware](docs/hardware.md)
-- [Software](docs/software.md)
-- [Program eMMC](docs/program-emmc.md)
-- [Resources](docs/resources.md)
+- [Home](index.md)
+- [Start Here](start-here.md)
+- [Hardware](hardware.md)
+- [Software](software.md)
+- [Program eMMC](program-emmc.md)
+- [Resources](resources.md)
 
-<img src="docs/images/Achilles_module.PNG" alt="Achilles Module" height="300">
+<a href="start-here.md" class="md-button">Start Here</a>
+
+| [Home](index.md) | [Start Here](start-here.md) | [Hardware](hardware.md) | [Software](software.md) | [Program eMMC](program-emmc.md) | [Resources](resources.md) |
+|:----------------:|:---------------------------:|:-----------------------:|:-----------------------:|:-------------------------------:|:-------------------------:|
+
+<img src="images/Achilles_module.PNG" alt="Achilles Module" height="300">
 
 The Achilles SoM by [REFLEX CES](https://www.reflexces.com/) features an Altera® Arria® 10 SX SoC FPGA (System-on-Chip Field Programmable Gate Array), including a dual-core ARM® Cortex™-A9 MPCore processor and up to 660K programmable Logic Elements. The Achilles SoM is designed to enable easy integration for end-user applications, providing full flexibility with the Intel® Arria® 10 SX SoC FPGA device. The SOM is available to purchase as part of a development kit for evaluation and prototyping, or as a production-ready module designed into your electronic assembly. The SOM also features industry standard FMC connectors to allow for easy integration of additional connectivity, video interfaces, data converters, and many other options available through FMC daughter cards.
 
@@ -93,7 +98,7 @@ Note: Achilles Development Kit comes with v5 Indus version SOM
 
 ##### Achilles SOM Block Diagram
 
-<img src="docs/images/Achilles_block_diagram.PNG" alt="Achilles Block Diagram" height="400">
+<img src="images/Achilles_block_diagram.PNG" alt="Achilles Block Diagram" height="400">
 
 ### SOM Carrier Board Options
 
@@ -112,7 +117,7 @@ The Achilles SOM cannot operate stand-alone and requires a carrier card. There a
 
 <div align="center">
 <b>Achilles Starter Board and Block Diagram</b>
-<img src="docs/images/Achilles_Starter_Board_with_block_diagram.PNG" alt="Achilles Starter Board" height="260">
+<img src="images/Achilles_Starter_Board_with_block_diagram.PNG" alt="Achilles Starter Board" height="260">
 </div>
 
 #### Option 2: Achilles PCIe Carrier Board (sold separately)
@@ -127,7 +132,7 @@ The Achilles SOM cannot operate stand-alone and requires a carrier card. There a
 
 <div align="center">
 <b>Achilles PCIe Carrier Board and Block Diagram</b>
-<img src="docs/images/Achilles_PCIe_Carrier_with_block_diagram.PNG" alt="Achilles PCIe Carrier Board" height="260">
+<img src="images/Achilles_PCIe_Carrier_with_block_diagram.PNG" alt="Achilles PCIe Carrier Board" height="260">
 </div>
 
 #### Option 3: Custom Carrier
