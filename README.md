@@ -1,12 +1,11 @@
 # REFLEX CES Achilles Arria 10 SoC SOM
 
-## Table of Contents
-- [Overview](#overview)
-- [Start Here](docs/start-here.md)
-- [Hardware](docs/hardware.md)
-- [Software](docs/software.md)
-- [Program eMMC](docs/program-emmc.md)
-- [Resources](docs/resources.md)
+<div align="center">
+
+| Home | [Start Here](docs/start-here.md) | [Hardware](docs/hardware.md) | [Software](docs/software.md) | [Program eMMC](docs/program-emmc.md) | [Resources](docs/resources.md) |
+|:----:|:--------------------------------:|:----------------------------:|:----------------------------:|:------------------------------------:|:------------------------------:|
+
+</div>
 
 <img src="docs/images/Achilles_module.PNG" alt="Achilles Module" height="300">
 
@@ -156,3 +155,10 @@ sales @ reflexces.com
 
 Americas, Asia Pacific:  
 salesusa @ reflexces.com
+
+<div align="center">
+
+| Home | [Start Here](docs/start-here.md) | [Hardware](docs/hardware.md) | [Software](docs/software.md) | [Program eMMC](docs/program-emmc.md) | [Resources](docs/resources.md) |
+|:----:|:--------------------------------:|:----------------------------:|:----------------------------:|:------------------------------------:|:------------------------------:|
+
+</div>
