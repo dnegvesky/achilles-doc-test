@@ -1,5 +1,12 @@
 # Hardware
 
+<div align="center">
+
+| [Overview](../README.md) | [Start Here](start-here.md) | Hardware | [Software](software.md) | [Program eMMC](program-emmc.md) | [Resources](resources.md) |
+|:------------------------:|:---------------------------:|:--------:|:-----------------------:|:-------------------------------:|:-------------------------:|
+
+</div>
+
 ## GHRD Overview
 The hardware component, or “Golden Hardware Reference Design” (GHRD), is a complete Quartus reference design targeting the Arria® 10 FPGA. The design includes the Hard Processor Subsystem (HPS) and custom logic running in the FPGA logic fabric. The HPS is configured using the Platform Designer tool in Quartus. After the HPS subsystem is generated, its HDL output is integrated in a top level HDL file that can be modified to include the user’s custom logic. The GHRD is available on the REFLEX CES achilles-hardware github repository page and is automatically downloaded by the build scripts or can be manually cloned (more details below). The achilles-hardware repository branches are named according to the Quartus Prime Pro version tested with that release.
 
@@ -184,3 +191,10 @@ This will create the file **/software/bootloader/devicetree.dts**.  This file mu
 -->
 
 Now you are ready to move on to building the **SOFTWARE** components.
+
+<div align="center">
+
+| [Overview](../README.md) | [Start Here](start-here.md) | Hardware | [Software](software.md) | [Program eMMC](program-emmc.md) | [Resources](resources.md) |
+|:------------------------:|:---------------------------:|:--------:|:-----------------------:|:-------------------------------:|:-------------------------:|
+
+</div>

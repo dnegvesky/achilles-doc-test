@@ -1,5 +1,12 @@
 # Resources
 
+<div align="center">
+
+| [Overview](../README.md) | [Start Here](start-here.md) | [Hardware](hardware.md) | [Software](software.md) | [Program eMMC](program-emmc.md) | Resources |
+|:------------------------:|:---------------------------:|:-----------------------:|:-----------------------:|:-------------------------------:|:---------:|
+
+</div>
+
 ## Additional Resources & References
 
 - [FMC Information](https://www.vita.com/fmc)

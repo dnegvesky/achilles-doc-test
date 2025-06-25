@@ -1,5 +1,12 @@
 # Program eMMC
 
+<div align="center">
+
+| [Overview](../README.md) | [Start Here](start-here.md) | [Hardware](hardware.md) | [Software](software.md) | Program eMMC | [Resources](resources.md) |
+|:------------------------:|:---------------------------:|:-----------------------:|:-----------------------:|:------------:|:-------------------------:|
+
+</div>
+
 The scripted Yocto build process will generate a WIC image file with the partition layout as shown in the image below.
 
 <img src="images/achilles-yocto-emmc.png" alt="Achilles Yocto eMMC Mapping" height="350">
@@ -301,3 +308,10 @@ Power cycle the Achilles board.
 
 ### Creating Your Own eMMC Image
 If you built the individual hardware and software system components and want to create your own eMMC image, you can follow the example available on the [Building Bootloader](https://rocketboards.org/foswiki/Documentation/BuildingBootloaderCycloneVAndArria10#Arria_10_SoC_45_Boot_from_SD_Card) article page.  Scroll down to section **C. Build SD Card Image**.  Then follow the steps above to clone the image to the Achilles eMMC.
+
+<div align="center">
+
+| [Overview](../README.md) | [Start Here](start-here.md) | [Hardware](hardware.md) | [Software](software.md) | Program eMMC | [Resources](resources.md) |
+|:------------------------:|:---------------------------:|:-----------------------:|:-----------------------:|:------------:|:-------------------------:|
+
+</div>
