@@ -104,7 +104,7 @@ Refer to the **PROGRAM EMMC** page to update your Achilles SOM with the new eMMC
   - From SPL/U-Boot (peripheral image only)
   - From U-Boot proper (core image only)
 
-    <img src="images/u-boot-startup-fpga-config.png" alt="U-Boot Startup" height="550">
+  <img src="images/u-boot-startup-fpga-config.png" alt="U-Boot Startup" height="550">
 
 - Application of devicetree overlay
   - FPGA partial reconfiguration from Linux  

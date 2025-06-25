@@ -123,7 +123,6 @@ The Achilles SOM cannot operate stand-alone and requires a carrier card. There a
   - 1x WiFi 802.11 b/g/n IoT module with SPI and SDIO interface to host controller
   - 1x 10 pin LCD connector * Size: PCIe Standard height, half length - 111.15 mm x 167.65 mm (4.38" x 6.60")
 
-
 <div align="center">
 <b>Achilles PCIe Carrier Board and Block Diagram</b>
 <img src="docs/images/Achilles_PCIe_Carrier_with_block_diagram.PNG" alt="Achilles PCIe Carrier Board" height="260">
