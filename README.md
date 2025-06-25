@@ -5,9 +5,9 @@
 | Overview | [Start Here](docs/start-here.md) | [Hardware](docs/hardware.md) | [Software](docs/software.md) | [Program eMMC](docs/program-emmc.md) | [Resources](docs/resources.md) |
 |:--------:|:--------------------------------:|:----------------------------:|:----------------------------:|:------------------------------------:|:------------------------------:|
 
-</div>
-
 <img src="docs/images/Achilles_module.PNG" alt="Achilles Module" height="300">
+
+</div>
 
 The Achilles SoM by [REFLEX CES](https://www.reflexces.com/) features an Altera® Arria® 10 SX SoC FPGA (System-on-Chip Field Programmable Gate Array), including a dual-core ARM® Cortex™-A9 MPCore processor and up to 660K programmable Logic Elements. The Achilles SoM is designed to enable easy integration for end-user applications, providing full flexibility with the Intel® Arria® 10 SX SoC FPGA device. The SOM is available to purchase as part of a development kit for evaluation and prototyping, or as a production-ready module designed into your electronic assembly. The SOM also features industry standard FMC connectors to allow for easy integration of additional connectivity, video interfaces, data converters, and many other options available through FMC daughter cards.
 
