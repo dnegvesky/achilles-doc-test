@@ -1,5 +1,14 @@
 # Hardware
 
+<div class="nav-button-container">
+<a href="index.html" class="nav-button">Home</a>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<span class="nav-button active">Hardware</span>
+<a href="software.html" class="nav-button">Software</a>
+<a href="program-emmc.html" class="nav-button">Program eMMC</a>
+<a href="resources.html" class="nav-button">Resources</a>
+</div>
+
 ## GHRD Overview
 The hardware component, or “Golden Hardware Reference Design” (GHRD), is a complete Quartus reference design targeting the Arria® 10 FPGA. The design includes the Hard Processor Subsystem (HPS) and custom logic running in the FPGA logic fabric. The HPS is configured using the Platform Designer tool in Quartus. After the HPS subsystem is generated, its HDL output is integrated in a top level HDL file that can be modified to include the user’s custom logic. The GHRD is available on the REFLEX CES achilles-hardware github repository page and is automatically downloaded by the build scripts or can be manually cloned (more details below). The achilles-hardware repository branches are named according to the Quartus Prime Pro version tested with that release.
 
@@ -66,28 +75,28 @@ Suggested Quartus Hardware reference designs available for Achilles SOM:
 | achilles_ghrd     | HPS/FPGA reference design - standard or PR example         | v23.1.0 Pro       | https://github.com/reflexces/achilles-hardware/tree/ghrd-v23.1    | ghrd-v23.1    |
 
 **Directory structure of the GHRD (ghrd-v21.3 and older)**
-<pre>
-achilles-hardware
-├── devicetree (contains devicetree overlay source files and pre-compiled dtbo binaries used for configuring the PR region; explained in more detail on the **SOFTWARE** page)
-├── hps_isw_handoff (contains the software handoff files generated during compilation)
-├── output_files (contains the programming files generated during compilation; fetched during software build and included on eMMC image file)
-└── src (main source file directory)
-    └── ip (contains Platform Designer source files)
-</pre>
+```bash
+📁  achilles-hardware
+├── 📁 devicetree (contains devicetree overlay source files and pre-compiled dtbo binaries used for configuring the PR region; explained in more detail on the **Software** page)
+├── 📁 hps_isw_handoff (contains the software handoff files generated during compilation)
+├── 📁 output_files (contains the programming files generated during compilation; fetched during software build and included on eMMC image file)
+└── 📁 src (main source file directory)
+    └── 📁 ip (contains Platform Designer source files)
+```
 
 **Directory structure of the GHRD (ghrd-v22.1 and newer)**
-<pre>
-achilles-hardware
-├── precompiled
-|   ├── hps_isw_handoff (contains precompiled software handoff files for each SOM version, generated during compilation)
-|   └── rbf (contains precompiled FPGA configuration files for each SOM version; fetched during software build and included on eMMC image file)
-└── src
-    ├── hdl (contains VHDL source files)
-    └── script (contains Platform Designing source script files
-</pre>
+```bash
+📁 achilles-hardware
+├── 📁 precompiled
+|   ├── 📁 hps_isw_handoff (contains precompiled software handoff files for each SOM version, generated during compilation)
+|   └── 📁 rbf (contains precompiled FPGA configuration files for each SOM version; fetched during software build and included on eMMC image file)
+└── 📁 src
+    ├── 📁 hdl (contains VHDL source files)
+    └── 📁 script (contains Platform Designing source script files
+```
 
 ### Compiling the GHRD (ghrd-v22.1 and newer)
-For the best user experience, it is recommended to use the GSRD build script described on the **START HERE** page.
+For the best user experience, it is recommended to use the GSRD build script described on the **Start Here** page.
 
 Advanced users may choose to run the **achilles-ghrd-build.sh** script separately by following these instructions.
 
@@ -107,7 +116,7 @@ Advanced users may choose to run the **achilles-ghrd-build.sh** script separatel
     ```
 
 ### Compiling the GHRD (ghrd-v21.3 and older)
-Detailed instructions for compiling the !GHRD are not provided here.  It is assumed that the user has sufficient knowledge of FPGA design and the Quartus development tools GUI to open a project and start the compilation process.  This can be done on either a Windows or Linux system using the Quartus GUI (command line build scripts are not provided).  The software build described on the **SOFTWARE** page **must** be done on Linux.  It will simplify the process to work completely in Linux if possible, since you will not need to transfer files from Windows to Linux when moving on to the Software build stage.  To use the !GHRD as a starting point for your own design or to recompile it, download the ZIP archive using the github link above, or using **git** to clone the repository and checkout the desired branch:
+Detailed instructions for compiling the !GHRD are not provided here.  It is assumed that the user has sufficient knowledge of FPGA design and the Quartus development tools GUI to open a project and start the compilation process.  This can be done on either a Windows or Linux system using the Quartus GUI (command line build scripts are not provided).  The software build described on the **Software** page **must** be done on Linux.  It will simplify the process to work completely in Linux if possible, since you will not need to transfer files from Windows to Linux when moving on to the Software build stage.  To use the !GHRD as a starting point for your own design or to recompile it, download the ZIP archive using the github link above, or using **git** to clone the repository and checkout the desired branch:
 
 ```bash
 git clone https://github.com/reflexces/achilles-hardware.git
@@ -121,7 +130,7 @@ Open the Quartus project and start a full compilation.  If using the Partial Rec
 
 <img src="images/compiling-revisions.png" alt="Compiling Revisions" height="250">
 
-Refer to the Partial Reconfiguration documentation listed on the **RESOURCES** page for more information on the Partial Reconfiguration design flow.  After the Quartus project compilation successfully completes, you will find the required software handoff files in the *hps_isw_handoff* folder and the FPGA programming files in the **output_files** folder of the Quartus project directory.  Pre-compiled FPGA configuration files (.sof/.rbf) are provided with the !GHRD in the github repository and are fetched and included in the generated eMMC image during the software build stage.  If the !GHRD was modified, then you will need to convert the generated achilles_ghrd.sof (or your_project.sof) file to split .rbf files (peripheral and core images).  Do this by opening a command line terminal on your host build machine (Windows or Linux), browse to your project **output_files** directory, and run the following command:
+Refer to the Partial Reconfiguration documentation listed on the **Resources** page for more information on the Partial Reconfiguration design flow.  After the Quartus project compilation successfully completes, you will find the required software handoff files in the *hps_isw_handoff* folder and the FPGA programming files in the **output_files** folder of the Quartus project directory.  Pre-compiled FPGA configuration files (.sof/.rbf) are provided with the !GHRD in the github repository and are fetched and included in the generated eMMC image during the software build stage.  If the !GHRD was modified, then you will need to convert the generated achilles_ghrd.sof (or your_project.sof) file to split .rbf files (peripheral and core images).  Do this by opening a command line terminal on your host build machine (Windows or Linux), browse to your project **output_files** directory, and run the following command:
 
 ```bash
 quartus_cpf --convert --hps -o bitstream_compression=on achilles_ghrd.sof achilles_ghrd.rbf
@@ -143,12 +152,12 @@ Without this .qsf setting, you would have to run a similar **quartus_cpf** comma
 quartus_cpf --convert blink_led_fast.pr_partition.pmsf blink_led_fast.pr_partition.rbf
 ```
 
-These PR region .rbf files must be copied to the Achilles Linux root filesystem (**/lib/firmware** is default) and are then referenced in a devicetree overlay file and applied to the base devicetree that is loaded with the Linux kernel during the boot process.  The devicetree overlay process is described in more detail on the **SOFTWARE** page.  The .rbf and devicetree overlay files are automatically copied to the generated root filesystem based on instructions in the **achilles-firmware.bb** recipe during the scripted build flow on the **SOFTWARE** page.  If using your own .rbf files generated from your project, you must ensure that they are copied correctly to the root filesystem if not using the scripted flow.
+These PR region .rbf files must be copied to the Achilles Linux root filesystem (**/lib/firmware** is default) and are then referenced in a devicetree overlay file and applied to the base devicetree that is loaded with the Linux kernel during the boot process.  The devicetree overlay process is described in more detail on the **Software** page.  The .rbf and devicetree overlay files are automatically copied to the generated root filesystem based on instructions in the **achilles-firmware.bb** recipe during the scripted build flow on the **Software** page.  If using your own .rbf files generated from your project, you must ensure that they are copied correctly to the root filesystem if not using the scripted flow.
 
-There is one additional step we need to manually perform to convert the periph.rbf and core.rbf files to the FIT image format used by U-Boot.  This is explained on the **SOFTWARE** page under the **Option 2: Generate FIT Images** section.
+There is one additional step we need to manually perform to convert the periph.rbf and core.rbf files to the FIT image format used by U-Boot.  This is explained on the **Software** page under the **Option 2: Generate FIT Images** section.
 
 ### Preparing for Software Handoff
-<!--The following steps are only required if you are bringing your own Quartus design or making changes to the !GHRD HPS system.  The Achilles U-Boot patch available in the *meta-achilles* Yocto BSP layer provided with this example already contains a functional U-Boot devicetree generated from this !GHRD with the peripherals described above.  If you only want to rebuild the software components, proceed to the *SOFTWARE* page now.
+<!--The following steps are only required if you are bringing your own Quartus design or making changes to the !GHRD HPS system.  The Achilles U-Boot patch available in the *meta-achilles* Yocto BSP layer provided with this example already contains a functional U-Boot devicetree generated from this !GHRD with the peripherals described above.  If you only want to rebuild the software components, proceed to the *Software* page now.
 -->
 If working in Windows to compile the FPGA design and transitioning to Linux at this time, open a terminal and create a top level working directory on your Linux host build system:
 
@@ -158,13 +167,13 @@ mkdir -p ~/achilles && cd ~/achilles
 
 Make a copy of the **hps_isw_handoff** folder to this working directory.  If you are already working in Linux at this time, you can work with the existing directory on your Linux PC.  You should have the following files in the **hps_isw_handoff** folder:
 
-<pre>
-achilles
-└── hps_isw_handoff
+```bash
+📁 achilles
+└── 📁 hps_isw_handoff
     ├── emif.xml
     ├── hps.xml
     └── id
-</pre>
+```
 <!--
 Start an Embedded Command Shell (default Quartus installation path is assumed):
 
@@ -183,4 +192,13 @@ bsp-create-settings --type uboot --bsp-dir software/bootloader --preloader-setti
 This will create the file **/software/bootloader/devicetree.dts**.  This file must be manually modified and copied into the U-Boot source tree (arch/arm/dts) after cloning the **u-boot-socfpga** Github repository and applying the [Achilles u-boot patch](https://github.com/reflexces/meta-achilles/blob/warrior/recipes-bsp/u-boot/files/v2019.10/0001-add-achilles-support-for-u-boot-socfpga-v2019.10.patch).  For details on the required modifications to **devicetree.dts**, refer to the [Building Bootloader](https://rocketboards.org/foswiki/Documentation/BuildingBootloader#Arria_10_SoC_45_Boot_from_SD_Card) article.  Again, this step is not required if you are simply rebuilding the !GHRD, since this file is already provided in the github repository.
 -->
 
-Now you are ready to move on to building the **SOFTWARE** components.
+Now you are ready to move on to building the **Software** components.
+
+<div class="nav-button-container">
+<a href="index.html" class="nav-button">Home</a>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<span class="nav-button active">Hardware</span>
+<a href="software.html" class="nav-button">Software</a>
+<a href="program-emmc.html" class="nav-button">Program eMMC</a>
+<a href="resources.html" class="nav-button">Resources</a>
+</div>

@@ -1,10 +1,19 @@
 # Program eMMC
 
+<div class="nav-button-container">
+<a href="index.html" class="nav-button">Home</a>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<a href="hardware.html" class="nav-button">Hardware</a>
+<a href="software.html" class="nav-button">Software</a>
+<span class="nav-button active">Program eMMC</span>
+<a href="resources.html" class="nav-button">Resources</a>
+</div>
+
 The scripted Yocto build process will generate a WIC image file with the partition layout as shown in the image below.
 
 <img src="images/achilles-yocto-emmc.png" alt="Achilles Yocto eMMC Mapping" height="350">
 
-A script is available to make the eMMC programming process easier.  The script can be run as part of the full GSRD build process by running the GSRD build script (see the **START HERE** page), or it can run independently.  This script can run in Linux or Windows (using Nios II Command Shell or WSL shell).  To manually download and run the script:
+A script is available to make the eMMC programming process easier.  The script can be run as part of the full GSRD build process by running the GSRD build script (see the **Start Here** page), or it can run independently.  This script can run in Linux or Windows (using Nios II Command Shell or WSL shell).  To manually download and run the script:
 
 ```bash
 wget https://raw.githubusercontent.com/reflexces/build-scripts/2023.07/program-emmc.sh
@@ -160,7 +169,7 @@ setenv rxcethload "tftp ${loadaddr} ${tftppath}${bootimage} ; tftp ${fdtaddr} ${
 run bootcmd
 ```
 
-After changing the variables, you can make them permanent by using the =saveenv= command before restarting the boot process by using the =run bootcmd= comand.
+After changing the variables, you can make them permanent by using the **saveenv** command before restarting the boot process by using the **run bootcmd** command.
 
 ### Writing Full WIC Image to eMMC
 Once the TFTP server is setup, you can perform a network boot and program the Achilles eMMC by following these steps.  Some knowledge of connecting to the Achilles SOM usinng terminal emulator software (e.g. PuTTY, Minicom, etc) and use of the Quartus Programmer is assumed for these steps.  Refer to the Achilles Reference Manual if you need assistance.
@@ -301,3 +310,12 @@ Power cycle the Achilles board.
 
 ### Creating Your Own eMMC Image
 If you built the individual hardware and software system components and want to create your own eMMC image, you can follow the example available on the [Building Bootloader](https://rocketboards.org/foswiki/Documentation/BuildingBootloaderCycloneVAndArria10#Arria_10_SoC_45_Boot_from_SD_Card) article page.  Scroll down to section **C. Build SD Card Image**.  Then follow the steps above to clone the image to the Achilles eMMC.
+
+<div class="nav-button-container">
+<a href="index.html" class="nav-button">Home</a>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<a href="hardware.html" class="nav-button">Hardware</a>
+<a href="software.html" class="nav-button">Software</a>
+<span class="nav-button active">Program eMMC</span>
+<a href="resources.html" class="nav-button">Resources</a>
+</div>

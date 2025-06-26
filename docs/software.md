@@ -1,5 +1,14 @@
 # Software
 
+<div class="nav-button-container">
+<a href="index.html" class="nav-button">Home</a>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<a href="hardware.html" class="nav-button">Hardware</a>
+<span class="nav-button active">Software</span>
+<a href="program-emmc.html" class="nav-button">Program eMMC</a>
+<a href="resources.html" class="nav-button">Resources</a>
+</div>
+
 ## Software Build Instructions
 
 All software compilation in this section must be done on a Linux host system.
@@ -13,7 +22,7 @@ Three options are presented here for generating the software components used to 
 ### Option 1: Yocto Build
 For an overview of the Yocto Project, visit the [Yocto Project Getting Started](https://www.yoctoproject.org/software-overview/) webpage.
 
-For the best user experience, it is recommended to use the GSRD build script described on the **START HERE** page.
+For the best user experience, it is recommended to use the GSRD build script described on the **Start Here** page.
 
 Advanced users may choose to run the **reflex-yocto-build** script separately by following these instructions.
 
@@ -24,7 +33,7 @@ The Yocto build is done by simply running 2 scripts:
 
 One advantage to the Yocto build is that at the end of the build process, you have a complete image ready to copy to the Achilles eMMC.  A disadvantage is that the intial build time can be long (over an hour depending on your host build system).  Subsequent builds complete much faster, as only required tasks will run (e.g. no need to fetch source code again).  Also, customizing the Yocto BSP layer to your application requirements has a steep learning curve if you are not familiar with the Yocto/OpenEmbedded build system.
 
-1. If not already done in the **HARDWARE** section, open a system terminal console and create a working directory: 
+1. If not already done in the **Hardware** section, open a system terminal console and create a working directory: 
 
     ```bash
     mkdir -p ~/achilles && cd ~/achilles
@@ -71,7 +80,7 @@ To build the Linux kernel only:
 ./reflex-yocto-build --board achilles-v5-indus --image virtual/kernel
 ```
 
-After the build completes successfully, all of the generated output files can be found in the directory **achilles-build-files/tmp/deploy/images/achilles-v5-indus**.  The main file of interest, **achilles-console-image-achilles-v5-indus.wic**, is copied to copied to the directory **achilles-emmc-image**.  This file can be used to program the entire eMMC.  Go to the **PROGRAM EMMC** page to view the table detailing the full list of files generated and for instructions to program the eMMC flash.
+After the build completes successfully, all of the generated output files can be found in the directory **achilles-build-files/tmp/deploy/images/achilles-v5-indus**.  The main file of interest, **achilles-console-image-achilles-v5-indus.wic**, is copied to copied to the directory **achilles-emmc-image**.  This file can be used to program the entire eMMC.  Go to the **Program eMMC** page to view the table detailing the full list of files generated and for instructions to program the eMMC flash.
 
 For Achilles Yocto builds using the **meta-achilles** layer, starting with the **kirkstone** branch and newer, the FPGA FIT images and optional devicetree overlays (used by the Partial Reconfiguration GHRD example) are now automatically generated during the Yocto build process.
 
@@ -80,19 +89,19 @@ For Yocto builds using the **meta-achilles** layer **honister** branch or older,
 #### Achilles Yocto BSP Layer Description
 The tree below describes the directory structure found in the **meta-achilles** Yocto BSP layer and the function of each recipe.  If you want to further examine **meta-achilles** or any other layer used in the Yocto build process, you can find them in the generated build directory within the **layers** sub-directory.
 
-<pre>
-meta-achilles
-├── conf (contains Achilles machine configuration file that defines HW configuration options, including U-Boot and kernel versions to build, instructions for files to include on the FAT partition of the WIC image, and other options)
-├── recipes-achilles (recipes specific to Achilles SOM to demonstrate various features)
-│   ├── achilles-firmware (recipe to add FPGA configuration files to image)
-│   ├── achilles-fpga-init (recipe to create a systemd service to apply devicetree overlay)
-│   └── achilles-usb-gadget (recipe to create a systemd service to enable USB Gadget support)
-├── recipes-bsp (recipe to patch and build U-Boot)
-├── recipes-core (recipes for misc. system configuration)
-├── recipes-images (recipes for complete images for Achilles SOM)
-├── recipes-kernel (recipes to patch, configure, and build Linux kernel)
-└── wic (contains WIC kick start file to configure the generated WIC image)
-</pre>
+```bash
+📁 meta-achilles
+├── 📁 conf (contains Achilles machine configuration file that defines HW configuration options, including U-Boot and kernel versions to build, instructions for files to include on the FAT partition of the WIC image, and other options)
+├── 📁 recipes-achilles (recipes specific to Achilles SOM to demonstrate various features)
+│   ├── 📁 achilles-firmware (recipe to add FPGA configuration files to image)
+│   ├── 📁 achilles-fpga-init (recipe to create a systemd service to apply devicetree overlay)
+│   └── 📁 achilles-usb-gadget (recipe to create a systemd service to enable USB Gadget support)
+├── 📁 recipes-bsp (recipe to patch and build U-Boot)
+├── 📁 recipes-core (recipes for misc. system configuration)
+├── 📁 recipes-images (recipes for complete images for Achilles SOM)
+├── 📁 recipes-kernel (recipes to patch, configure, and build Linux kernel)
+└── 📁 wic (contains WIC kick start file to configure the generated WIC image)
+```
 
 ### Option 2: Build U-Boot and Linux Kernel Individually
 One advantage to building components individually is that the build time can be faster.  A disadvantage is that you need to manually create the image for programming the eMMC device, or update partitions separately.  You also still need a root filesystem, which can be built with other tools like Buildroot, or using "ready-made" root filesystem archives (e.g. Linaro).
@@ -182,11 +191,11 @@ mkpimage -hv 1 -o spl/spl_w_dtb-mkpimage.bin spl/u-boot-spl-dtb.bin spl/u-boot-s
 
 This step is required only if you are not using the scripted build flow.
 
-Now we can generate the FIT images using the split .rbf FPGA programming files generated in the **HARDWARE** section.  These are used by the SPL and U-Boot to configure the FPGA.  The Achilles U-Boot patch has configured the U-Boot source code to have the SPL load only the peripheral FPGA image, and then U-Boot loads the core image.  This is significantly faster than having the SPL load both images. 
+Now we can generate the FIT images using the split .rbf FPGA programming files generated in the **Hardware** section.  These are used by the SPL and U-Boot to configure the FPGA.  The Achilles U-Boot patch has configured the U-Boot source code to have the SPL load only the peripheral FPGA image, and then U-Boot loads the core image.  This is significantly faster than having the SPL load both images. 
 
 **NOTE:** this process of generating FIT images is currently not run automatically during the Yocto build.  Instead, pre-generated FIT files using the Achilles GHRD .rbf files are fetched and included in the generated WIC eMMC image.  You must complete these steps if using your own custom FPGA design.
 
-First create symbolic links to point to the location of the .rbf files generated in the **HARDWARE** section.  References below are to the Achilles GHRD .rbf files.  Replace with your own file names if applicable, but do not rename the .its or .itb file references since these are defined in U-Boot source code.  The .its files define the locataion and names of the .rbf files to be used when creating the .itb files.
+First create symbolic links to point to the location of the .rbf files generated in the **Hardware** section.  References below are to the Achilles GHRD .rbf files.  Replace with your own file names if applicable, but do not rename the .its or .itb file references since these are defined in U-Boot source code.  The .its files define the locataion and names of the .rbf files to be used when creating the .itb files.
 
 ```bash
 ln -s <path/to/rbf/files>/achilles_ghrd.periph.rbf
@@ -205,7 +214,7 @@ Now we have the following files that can be copied to the eMMC:
 | fit_spl_fpga_periph_only.itb | FIT image for FPGA peripheral image configuration only	 | Partition 1 (VFAT)   |
 | fit_spl_fpga.itb             | FIT image for FPGA core image configuration             | Partition 1 (VFAT)   |
 
-If you compiled your own FPGA design or made modifications to the GHRD, you must manually copy the generated files listed above to the appropriate eMMC partition.  Refer to the instructions on the **PROGRAM EMMC** page.
+If you compiled your own FPGA design or made modifications to the GHRD, you must manually copy the generated files listed above to the appropriate eMMC partition.  Refer to the instructions on the **Program eMMC** page.
 
 Note: Either the .rbf or .itb file can be used for FPGA core image configuration in U-Boot.  The .itb file is used by default U-Boot environment commands.  Both files are included for completeness of the example.
 To load the .rbf file from U-Boot, enter the command at the U-Boot prompt:
@@ -322,7 +331,7 @@ Compile the .dtso files using either of these 2 method:
 
   Note that the **make** utility expects to see the .dts filename extension for devicetree input source files and will generate .dtb output files.  If you plan to use the test script provided in the **meta-achilles** layer to apply the overlays, you will need to manually rename the input .dtso to .dts, and the output .dtb to .dtbo.  There is no requirement in Linux to use these extensions; however, these are the extensions used in the GHRD example to differentiate them as devicetree overlays.
   
-- Use the kernel source tree DTC tool.  **DO NOT** use the DTC tool from the Embedded Command Shell as instructed in AN 798 (link availabe on **RESOURCES** page):
+- Use the kernel source tree DTC tool.  **DO NOT** use the DTC tool from the Embedded Command Shell as instructed in AN 798 (link availabe on **Resources** page):
   ```bash
   dtc -@ -I dts -O dtb -o achilles_ghrd_base.dtbo achilles_ghrd_base.dtso
   dtc -@ -I dts -O dtb -o achilles_sysid.dtbo achilles_sysid.dtso
@@ -331,7 +340,7 @@ Compile the .dtso files using either of these 2 method:
   dtc -@ -I dts -O dtb -o blink_led_slow.dtbo blink_led_slow.dtso		 
   ```
 
-Copy the generated .dtbo files to the Achilles root filesystem **/lib/firmware** directory.  This is the default directory used by **configfs**, but other directories can be specified if desired.  Refer to the **PROGRAM EMMC** page for instructions on copying files to the various eMMC parititions.  In this case, you will be copying to partition 3 (the Linux EXT4 partition).
+Copy the generated .dtbo files to the Achilles root filesystem **/lib/firmware** directory.  This is the default directory used by **configfs**, but other directories can be specified if desired.  Refer to the **Program eMMC** page for instructions on copying files to the various eMMC parititions.  In this case, you will be copying to partition 3 (the Linux EXT4 partition).
 
 **Applying an Overlay**
 
@@ -350,4 +359,13 @@ cat /sys/kernel/config/device-tree/overlays/my-overlay-dir-name/status
 applied
 ```
 
-A script is provided as part of the GSRD and can be used to apply the various PR region overlays to change the LED blink rate, as demonstrated on the **START HERE** page.  The script is located on the Achilles root filesystem at **/home/root/pr_overlay.sh**.
+A script is provided as part of the GSRD and can be used to apply the various PR region overlays to change the LED blink rate, as demonstrated on the **Start Here** page.  The script is located on the Achilles root filesystem at **/home/root/pr_overlay.sh**.
+
+<div class="nav-button-container">
+<a href="index.html" class="nav-button">Home</a>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<a href="hardware.html" class="nav-button">Hardware</a>
+<span class="nav-button active">Software</span>
+<a href="program-emmc.html" class="nav-button">Program eMMC</a>
+<a href="resources.html" class="nav-button">Resources</a>
+</div>

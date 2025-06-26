@@ -3,7 +3,7 @@ site_url: https://dnegvesky.github.io/achilles-doc-test/
 repo_url: https://github.com/dnegvesky/achilles-doc-test
 repo_name: dnegvesky/achilles-doc-test
 theme:
-  name: mkdocs
+  name: readthedocs
   palette:
     primary: blue
   features:

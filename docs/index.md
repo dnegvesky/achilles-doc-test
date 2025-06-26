@@ -1,19 +1,15 @@
 # REFLEX CES Achilles Arria 10 SoC SOM
 
-## Table of Contents
-- [Home](index.md)
-- [Start Here](start-here.md)
-- [Hardware](hardware.md)
-- [Software](software.md)
-- [Program eMMC](program-emmc.md)
-- [Resources](resources.md)
+<div class="nav-button-container">
+<span class="nav-button active">Home</span>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<a href="hardware.html" class="nav-button">Hardware</a>
+<a href="software.html" class="nav-button">Software</a>
+<a href="program-emmc.html" class="nav-button">Program eMMC</a>
+<a href="resources.html" class="nav-button">Resources</a>
+</div>
 
-<a href="start-here.md" class="md-button">Start Here</a>
-
-| [Home](index.md) | [Start Here](start-here.md) | [Hardware](hardware.md) | [Software](software.md) | [Program eMMC](program-emmc.md) | [Resources](resources.md) |
-|:----------------:|:---------------------------:|:-----------------------:|:-----------------------:|:-------------------------------:|:-------------------------:|
-
-<img src="images/Achilles_module.PNG" alt="Achilles Module" height="300">
+![Achilles Module](images/Achilles_module.PNG){ .spaced-image .centered-image }
 
 The Achilles SoM by [REFLEX CES](https://www.reflexces.com/) features an Altera® Arria® 10 SX SoC FPGA (System-on-Chip Field Programmable Gate Array), including a dual-core ARM® Cortex™-A9 MPCore processor and up to 660K programmable Logic Elements. The Achilles SoM is designed to enable easy integration for end-user applications, providing full flexibility with the Intel® Arria® 10 SX SoC FPGA device. The SOM is available to purchase as part of a development kit for evaluation and prototyping, or as a production-ready module designed into your electronic assembly. The SOM also features industry standard FMC connectors to allow for easy integration of additional connectivity, video interfaces, data converters, and many other options available through FMC daughter cards.
 
@@ -23,7 +19,7 @@ Ideal target markets include Automotive, Video Broadcast, Machine and Intelligen
 
 There are 6 versions of the SOM available:  
 
-|SOM Version      | v2 Lite         | v2 Indus        | v2 Turbo        | v5 Indus        | v5 Indus 12G    | v5 Lite         |
+| SOM Version     | v2 Lite         | v2 Indus        | v2 Turbo        | v5 Indus        | v5 Indus 12G    | v5 Lite         |
 |-----------------|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
 |FPGA Density     | 270 KLE         | 660 KLE         | 660 KLE         | 660 KLE         | 660 KLE         | 270 KLE         |
 |FPGA Speed Grade | -2              | -1              | -1              | -1              | -1              | -2              |
@@ -98,14 +94,12 @@ Note: Achilles Development Kit comes with v5 Indus version SOM
 
 ##### Achilles SOM Block Diagram
 
-<img src="images/Achilles_block_diagram.PNG" alt="Achilles Block Diagram" height="400">
+![Achilles Module](images/Achilles_block_diagram.PNG)
 
 ### SOM Carrier Board Options
-
 The Achilles SOM cannot operate stand-alone and requires a carrier card. There are 3 options available:
 
 #### Option 1: Achilles Starter Board (included with purchase of Development Kit)
-
 - Evaluation mode on desktop with AC power supply
 - 2x Ethernet RJ-45 connectors
 - 1x USB 3.0 Micro B connector (FPGA)
@@ -117,11 +111,10 @@ The Achilles SOM cannot operate stand-alone and requires a carrier card. There a
 
 <div align="center">
 <b>Achilles Starter Board and Block Diagram</b>
-<img src="images/Achilles_Starter_Board_with_block_diagram.PNG" alt="Achilles Starter Board" height="260">
 </div>
+![Achilles Starter Board](images/Achilles_Starter_Board_with_block_diagram.PNG){ .spaced-image .centered-image }
 
 #### Option 2: Achilles PCIe Carrier Board (sold separately)
-
 - Evaluation mode plugged into PCIe slot OR on desktop with AC power supply (not included with PCIe Carrier)
 - Includes all the interfaces available on the Starter Board, plus:
   - PCIe Gen3 x8 card edge connector * 1x QSFP+ quad optical cage (4 XCVR @ 10.3125 Gbps per link)
@@ -129,19 +122,16 @@ The Achilles SOM cannot operate stand-alone and requires a carrier card. There a
   - 1x WiFi 802.11 b/g/n IoT module with SPI and SDIO interface to host controller
   - 1x 10 pin LCD connector * Size: PCIe Standard height, half length - 111.15 mm x 167.65 mm (4.38" x 6.60")
 
-
 <div align="center">
 <b>Achilles PCIe Carrier Board and Block Diagram</b>
-<img src="images/Achilles_PCIe_Carrier_with_block_diagram.PNG" alt="Achilles PCIe Carrier Board" height="260">
 </div>
+![Achilles PCIe Carrier Board](images/Achilles_PCIe_Carrier_with_block_diagram.PNG){ .spaced-image .centered-image }
 
 #### Option 3: Custom Carrier
-
 - Design your own carrier using our Carrier Design Guide
 - Use REFLEX CES custom design services
 
 #### Development Kit Deliverables
-
 - Achilles Arria® 10 SoC SOM
 - Starter Board
 - VHDL test and reference designs
@@ -153,7 +143,6 @@ The Achilles SOM cannot operate stand-alone and requires a carrier card. There a
 - LTPowerPlay project
 
 #### Purchase
-
 Please contact REFLEX CES Sales.
 
 Europe, Japan:  
@@ -161,3 +150,12 @@ sales @ reflexces.com
 
 Americas, Asia Pacific:  
 salesusa @ reflexces.com
+
+<div class="nav-button-container">
+<span class="nav-button active">Home</span>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<a href="hardware.html" class="nav-button">Hardware</a>
+<a href="software.html" class="nav-button">Software</a>
+<a href="program-emmc.html" class="nav-button">Program eMMC</a>
+<a href="resources.html" class="nav-button">Resources</a>
+</div>

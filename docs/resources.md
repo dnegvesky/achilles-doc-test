@@ -1,5 +1,14 @@
 # Resources
 
+<div class="nav-button-container">
+<a href="index.html" class="nav-button">Home</a>
+<a href="start-here.html" class="nav-button">Start Here</a>
+<a href="hardware.html" class="nav-button">Hardware</a>
+<a href="software.html" class="nav-button">Software</a>
+<a href="program-emmc.html" class="nav-button">Program eMMC</a>
+<span class="nav-button active">Resources</span>
+</div>
+
 ## Additional Resources & References
 
 - [FMC Information](https://www.vita.com/fmc)
@@ -23,4 +32,4 @@
 - [Building Bootloader](https://rocketboards.org/foswiki/Documentation/BuildingBootloader)
 - [How to Create a Device Tree](https://rocketboards.org/foswiki/Documentation/HOWTOCreateADeviceTree)
 - [Booting Altera SoC FPGA From Network Using TFTP And NFS](https://www.rocketboards.org/foswiki/Documentation/BootingAlteraSoCFPGAFromNetworkUsingTFTPAndNFS)
-- [Building initramfs for simple network boot](https://rocketboards.org/foswiki/Documentation/BuildingInitramfsForSimpleNetworkBoot)
+- [Building initramfs for Simple Network Boot](https://rocketboards.org/foswiki/Documentation/BuildingInitramfsForSimpleNetworkBoot)
