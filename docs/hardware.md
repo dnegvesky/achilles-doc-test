@@ -60,7 +60,7 @@ The image below describes the new GHRD build flow starting with the ghrd-v22.1 b
    8. When this completes, the full Quartus compilation flow begins.
    9. Finally, after compilation finishes, the resulting .sof file is converted to the split *.periph.rbf* and *.core.rbf* configuration files which are used by the HPS to configure the FPGA.
 
-<img src="images/achilles ghrd build flow 2022.06.png" alt="Achilles GHRD Build Flow" height="868">
+<img src="images/achilles_ghrd_build_flow_2022.06.png" alt="Achilles GHRD Build Flow" height="868">
 
 Suggested Quartus Hardware reference designs available for Achilles SOM:
 
